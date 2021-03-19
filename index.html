@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Latest compiled and minified JavaScript -->
+    <title>Audio App</title>
+  </head>
+  <body>
+    <div class="app">
+        weather for lattitude = abc & longitude = 132
+        <hr/>
+
+        <button onclick="getWwatherData()">Get Weather Data</button>
+        <div class="container">
+            <div class="row" id="weather-list">
+                <!-- <div class="col-sm-4">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <img src="./public//full_sun.svg">
+                            </div>
+                            <div class="col-sm-6">
+                                <span class="temp">8</span>°C
+                                <div>
+                                    and rising
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-1">
+                    col2
+                </div>
+                <div class="col-sm-1">
+                    col3
+                </div>
+                <div class="col-sm-1">
+                    col4
+                </div>
+                <div class="col-sm-1">
+                    col5
+                </div>
+                <div class="col-sm-1">
+                    col6
+                </div> -->
+            </div>
+        </div>
+
+
+        <form class="form-inline">
+            <label for="email" class="mr-sm-2">Lattitude:</label>
+            <div class="form-input">
+                <input type="text" value="-73.98529171943665" class="form-control mb-2 mr-sm-2" placeholder="Enter Lattitude" id="lattitude">
+                <span id="lattitude-error"> </span>
+            </div>
+            <label for="pwd" class="mr-sm-2">Longitude:</label>
+            <div class="form-input">
+                <input type="text" value="40.75872069597532" class="form-control mb-2 mr-sm-2" placeholder="Enter Longitude" id="longitude">
+                <span id="longitude-error"></span>
+            </div>
+            <button type="button" class="btn btn-primary mb-2" onclick="getWwatherDataByLatLong()">Submit</button>
+          </form>
+
+
+
+
+        <div class="page-content page-container" id="page-content">
+            <div class="padding">
+                <div class="row container d-flex justify-content-center">
+                    <div class="col-lg-8 grid-margin stretch-card">
+                        <div class="card card-weather">
+                            <div class="card-body">
+                                <div class="weather-date-location">
+                                    <h3 id="today-day"></h3>
+                                    <p class="text-gray"> <span class="weather-date" id="today-date">25 March, 2019</span> </p>
+                                </div>
+                                <div class="weather-data d-flex">
+                                    <div class="mr-auto">
+                                        <h4 class="display-3" id="today-temp"></h4>
+                                        <p id="today-weather-type"> Cloudy </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="d-flex weakly-weather" id="card-weather-list">
+                              
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script src="./services/dateService.js"></script>
+    <script src="./services/weatherService.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
