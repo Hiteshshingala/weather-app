@@ -12,49 +12,16 @@
     <link rel="stylesheet" href="./style.css" />
 
     <!-- Latest compiled and minified JavaScript -->
-    <title>Audio App</title>
+    <title>weather App</title>
+    <link rel="shortcut icon" type="image/jpg" href="./public/logo.png"/>
   </head>
   <body>
-    <div class="app">
-        weather for lattitude = abc & longitude = 132
+      <span class="loader"></span>
+      <div class="app">
+        <span class="weather-text" id="weather-text">
+            weather for lattitude = abc & longitude = 132
+        </span>
         <hr/>
-
-        <button onclick="getWwatherData()">Get Weather Data</button>
-        <div class="container">
-            <div class="row" id="weather-list">
-                <!-- <div class="col-sm-4">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <img src="./public//full_sun.svg">
-                            </div>
-                            <div class="col-sm-6">
-                                <span class="temp">8</span>°C
-                                <div>
-                                    and rising
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-1">
-                    col2
-                </div>
-                <div class="col-sm-1">
-                    col3
-                </div>
-                <div class="col-sm-1">
-                    col4
-                </div>
-                <div class="col-sm-1">
-                    col5
-                </div>
-                <div class="col-sm-1">
-                    col6
-                </div> -->
-            </div>
-        </div>
-
 
         <form class="form-inline">
             <label for="email" class="mr-sm-2">Lattitude:</label>

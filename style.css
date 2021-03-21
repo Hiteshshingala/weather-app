@@ -23,7 +23,7 @@ body {
     .padding {
         padding: 1rem
     }
-}
+} 
 
 .padding {
     padding: 5rem
@@ -95,30 +95,15 @@ h6 {
     font-weight: 500
 }
 
-.text-gray,
-.card-subtitle,
-.new-accounts ul.chats li.chat-persons a p.joined-date {
-    color: #969696
-}
 
 p {
     font-size: 13px
-}
-
-.text-gray,
-.card-subtitle,
-.new-accounts ul.chats li.chat-persons a p.joined-date {
-    color: #969696
 }
 
 .card-weather .weather-data {
     padding: 0 0 4.75rem
 }
 
-.mr-auto,
-.mx-auto {
-    margin-right: auto !important
-}
 
 .display-3 {
     font-size: 2.5rem
@@ -145,7 +130,7 @@ p {
     margin-bottom: 0 !important
 }
 
-.card-weather .weakly-weather .weakly-weather-item i {
+.card-weather .weakly-weather .weakly-weather-item{
     font-size: 1.2rem
 }
 .form-input {
@@ -153,3 +138,51 @@ p {
     color: red;
     font-size: 14px;
 }
+
+ /* for loader  */
+ .loader {
+    width: 175px;
+    height: 80px;
+    display: none;
+    margin: auto;
+    background-image: radial-gradient(circle 25px at 25px 25px, #FFF 100%, transparent 0), radial-gradient(circle 50px at 50px 50px, #FFF 100%, transparent 0), radial-gradient(circle 25px at 25px 25px, #FFF 100%, transparent 0), linear-gradient(#FFF 50px, transparent 0);
+    background-size: 50px 50px, 100px 76px, 50px 50px, 120px 40px;
+    background-position: 0px 30px, 37px 0px, 122px 30px, 25px 40px;
+    background-repeat: no-repeat;
+    position: relative;
+    box-sizing: border-box;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    bottom: 1px;
+    z-index: 2;
+  }
+  .loader::after {
+    content: '';  
+    left: 70px;
+    right: 0;
+    bottom: 20px;
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-color: #FF3D00 transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+
+  .opacity-blur {
+    opacity: 0.5;
+  }
+  
